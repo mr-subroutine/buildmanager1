@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_getbuild = new System.Windows.Forms.Button();
+            this.btn_delete_current = new System.Windows.Forms.Button();
+            this.btn_archive_current = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,37 +48,40 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_getbuild
             // 
-            this.button1.Location = new System.Drawing.Point(12, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 53);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Get New Daily Build";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_getbuild.Location = new System.Drawing.Point(12, 95);
+            this.btn_getbuild.Name = "btn_getbuild";
+            this.btn_getbuild.Size = new System.Drawing.Size(121, 53);
+            this.btn_getbuild.TabIndex = 0;
+            this.btn_getbuild.Text = "Get New Daily Build";
+            this.btn_getbuild.UseVisualStyleBackColor = true;
+            this.btn_getbuild.Click += new System.EventHandler(this.btn_getbuild_Click);
             // 
-            // button2
+            // btn_delete_current
             // 
-            this.button2.Location = new System.Drawing.Point(179, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 24);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Delete Current Build";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_delete_current.Location = new System.Drawing.Point(179, 95);
+            this.btn_delete_current.Name = "btn_delete_current";
+            this.btn_delete_current.Size = new System.Drawing.Size(110, 24);
+            this.btn_delete_current.TabIndex = 1;
+            this.btn_delete_current.Text = "Delete Current Build";
+            this.btn_delete_current.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_archive_current
             // 
-            this.button3.Location = new System.Drawing.Point(179, 124);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 24);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Archive Current Build";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_archive_current.Location = new System.Drawing.Point(179, 124);
+            this.btn_archive_current.Name = "btn_archive_current";
+            this.btn_archive_current.Size = new System.Drawing.Size(110, 24);
+            this.btn_archive_current.TabIndex = 2;
+            this.btn_archive_current.Text = "Archive Current Build";
+            this.btn_archive_current.UseVisualStyleBackColor = true;
             // 
             // listBox2
             // 
@@ -135,7 +138,7 @@
             // 
             // btn_archive
             // 
-            this.btn_archive.Location = new System.Drawing.Point(179, 307);
+            this.btn_archive.Location = new System.Drawing.Point(12, 307);
             this.btn_archive.Name = "btn_archive";
             this.btn_archive.Size = new System.Drawing.Size(110, 24);
             this.btn_archive.TabIndex = 12;
@@ -145,9 +148,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 281);
+            this.textBox1.Location = new System.Drawing.Point(12, 281);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 20);
+            this.textBox1.Size = new System.Drawing.Size(277, 20);
             this.textBox1.TabIndex = 13;
             // 
             // textBox2
@@ -222,21 +225,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auto Archive";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "On";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(112, 29);
+            this.radioButton2.Location = new System.Drawing.Point(57, 42);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(39, 17);
             this.radioButton2.TabIndex = 1;
@@ -244,11 +236,42 @@
             this.radioButton2.Text = "Off";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(57, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(39, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "On";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 199);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(444, 23);
+            this.progressBar1.TabIndex = 22;
+            this.progressBar1.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Copy Progress";
+            this.label5.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 564);
+            this.ClientSize = new System.Drawing.Size(470, 569);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -265,9 +288,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_archive_current);
+            this.Controls.Add(this.btn_delete_current);
+            this.Controls.Add(this.btn_getbuild);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Build Manager ver 0.1";
@@ -280,9 +303,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_getbuild;
+        private System.Windows.Forms.Button btn_delete_current;
+        private System.Windows.Forms.Button btn_archive_current;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
@@ -302,6 +325,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label5;
     }
 }
 

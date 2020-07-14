@@ -1,7 +1,6 @@
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\bin\Debug\buildmanager1.exe.config
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\bin\Debug\buildmanager1.exe
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\bin\Debug\buildmanager1.pdb
-C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.csprojAssemblyReference.cache
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.Form1.resources
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.Properties.Resources.resources
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.csproj.GenerateResource.cache
