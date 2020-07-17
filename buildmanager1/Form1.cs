@@ -94,19 +94,18 @@ namespace buildmanager1
             if (System.IO.Directory.Exists(sourceLoc))
             {
                 string[] files = System.IO.Directory.GetFiles(sourceLoc);
-                
+
                 // WIP delete any files in destination dir FIRST!
-                
+
 
                 // begin copy
                 foreach (string s in files)
                 {
-                    fileName = System.IO.Path.GetFileName(s);
-                    destFile = System.IO.Path.Combine(destiLoc, fileName);
-
                     // new thread to prevent blocking UI thread
                     new Thread(() =>
                     {
+                        fileName = System.IO.Path.GetFileName(s);
+                        destFile = System.IO.Path.Combine(destiLoc, fileName);
                         System.IO.File.Copy(s, destFile, true);
                     }).Start();
 
