@@ -86,14 +86,14 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(15, 373);
+            this.listBox2.Location = new System.Drawing.Point(12, 385);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(274, 147);
             this.listBox2.TabIndex = 4;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(299, 411);
+            this.button4.Location = new System.Drawing.Point(296, 423);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(157, 32);
             this.button4.TabIndex = 5;
@@ -105,14 +105,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(99, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Source Folder";
+            this.label1.Text = "Build Source Folder";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 357);
+            this.label2.Location = new System.Drawing.Point(9, 369);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(299, 449);
+            this.button6.Location = new System.Drawing.Point(296, 461);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(157, 32);
             this.button6.TabIndex = 9;
@@ -129,7 +129,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(299, 487);
+            this.button7.Location = new System.Drawing.Point(296, 499);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(157, 32);
             this.button7.TabIndex = 10;
@@ -138,9 +138,9 @@
             // 
             // btn_archive
             // 
-            this.btn_archive.Location = new System.Drawing.Point(12, 307);
+            this.btn_archive.Location = new System.Drawing.Point(619, 257);
             this.btn_archive.Name = "btn_archive";
-            this.btn_archive.Size = new System.Drawing.Size(110, 24);
+            this.btn_archive.Size = new System.Drawing.Size(157, 31);
             this.btn_archive.TabIndex = 12;
             this.btn_archive.Text = "Set Archive Location";
             this.btn_archive.UseVisualStyleBackColor = true;
@@ -148,21 +148,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 281);
+            this.textBox1.Location = new System.Drawing.Point(9, 263);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 20);
+            this.textBox1.Size = new System.Drawing.Size(572, 20);
             this.textBox1.TabIndex = 13;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(12, 30);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 20);
+            this.textBox2.Size = new System.Drawing.Size(569, 20);
             this.textBox2.TabIndex = 14;
             // 
             // btn_source
             // 
-            this.btn_source.Location = new System.Drawing.Point(299, 24);
+            this.btn_source.Location = new System.Drawing.Point(619, 24);
             this.btn_source.Name = "btn_source";
             this.btn_source.Size = new System.Drawing.Size(157, 31);
             this.btn_source.TabIndex = 15;
@@ -172,7 +172,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(299, 373);
+            this.button9.Location = new System.Drawing.Point(296, 385);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(157, 32);
             this.button9.TabIndex = 16;
@@ -183,12 +183,12 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(12, 69);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(277, 20);
+            this.textBox3.Size = new System.Drawing.Size(569, 20);
             this.textBox3.TabIndex = 17;
             // 
             // btn_dest
             // 
-            this.btn_dest.Location = new System.Drawing.Point(299, 63);
+            this.btn_dest.Location = new System.Drawing.Point(619, 63);
             this.btn_dest.Name = "btn_dest";
             this.btn_dest.Size = new System.Drawing.Size(157, 31);
             this.btn_dest.TabIndex = 18;
@@ -201,34 +201,34 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.Size = new System.Drawing.Size(118, 13);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Destination Folder";
+            this.label3.Text = "Build Destination Folder";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 265);
+            this.label4.Location = new System.Drawing.Point(9, 247);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Archive Location";
+            this.label4.Text = "Build Archive Location";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(301, 265);
+            this.groupBox1.Location = new System.Drawing.Point(9, 305);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(157, 66);
+            this.groupBox1.Size = new System.Drawing.Size(157, 49);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Auto Archive";
+            this.groupBox1.Text = "Auto Archive Builds?";
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(57, 42);
+            this.radioButton2.Location = new System.Drawing.Point(112, 19);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(39, 17);
             this.radioButton2.TabIndex = 1;
@@ -239,7 +239,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(57, 19);
+            this.radioButton1.Location = new System.Drawing.Point(6, 19);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(39, 17);
             this.radioButton1.TabIndex = 0;
@@ -251,7 +251,7 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 199);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(444, 23);
+            this.progressBar1.Size = new System.Drawing.Size(764, 23);
             this.progressBar1.TabIndex = 22;
             this.progressBar1.Visible = false;
             // 
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 569);
+            this.ClientSize = new System.Drawing.Size(790, 558);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox1);

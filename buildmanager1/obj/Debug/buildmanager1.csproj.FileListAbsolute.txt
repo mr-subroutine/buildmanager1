@@ -7,3 +7,4 @@ C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.csproj.CoreCompileInputs.cache
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.exe
 C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.pdb
+C:\Users\gamef\source\repos\buildmanager1\buildmanager1\obj\Debug\buildmanager1.csprojAssemblyReference.cache

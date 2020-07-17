@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace buildmanager1
@@ -75,6 +76,7 @@ namespace buildmanager1
             }
         }
 
+        // copy new data to destination
         private void btn_getbuild_Click(object sender, EventArgs e)
         {
             progressBar1.Visible = true;
@@ -83,16 +85,38 @@ namespace buildmanager1
             // get all the file names
             string[] allFiles = System.IO.Directory.GetFiles(sourceLoc);
 
+            progressBar1.Visible = true;
+            progressBar1.Minimum = 1;
+            progressBar1.Maximum = allFiles.Length;
+            progressBar1.Value = 1;
+            progressBar1.Step = 1;
+
             if (System.IO.Directory.Exists(sourceLoc))
             {
                 string[] files = System.IO.Directory.GetFiles(sourceLoc);
+                
+                // WIP delete any files in destination dir FIRST!
+                
 
+                // begin copy
                 foreach (string s in files)
                 {
                     fileName = System.IO.Path.GetFileName(s);
                     destFile = System.IO.Path.Combine(destiLoc, fileName);
-                    System.IO.File.Copy(s, destFile, true);
+
+                    // new thread to prevent blocking UI thread
+                    new Thread(() =>
+                    {
+                        System.IO.File.Copy(s, destFile, true);
+                    }).Start();
+
+                    progressBar1.Refresh();
+                    progressBar1.PerformStep();
                 }
+
+                // turn off label and progress bar
+                progressBar1.Visible = true;
+                label5.Visible = true;
             }
 
             else
