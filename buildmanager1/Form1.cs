@@ -93,11 +93,21 @@ namespace buildmanager1
 
             if (System.IO.Directory.Exists(sourceLoc))
             {
+
+                // WIP - find a way to delete and make sure file is unlocked or there will be an exception
+
+                // deletes files in destination dir first before copy
+                System.IO.DirectoryInfo di = new DirectoryInfo(destiLoc);
+                foreach (FileInfo file in di.GetFiles())
+                {
+                    file.Delete();
+                }
+                foreach (DirectoryInfo dir in di.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
+
                 string[] files = System.IO.Directory.GetFiles(sourceLoc);
-
-                // WIP delete any files in destination dir FIRST!
-
-
                 // begin copy
                 foreach (string s in files)
                 {
@@ -114,8 +124,8 @@ namespace buildmanager1
                 }
 
                 // turn off label and progress bar
-                progressBar1.Visible = true;
-                label5.Visible = true;
+                progressBar1.Visible = false;
+                label5.Visible = false;
             }
 
             else
